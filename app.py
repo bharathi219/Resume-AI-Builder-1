@@ -1,16 +1,24 @@
 import streamlit as st
 import pdfplumber
-import spacy
 import json
 import subprocess
 import importlib.util
+
+import spacy
+from spacy.cli import download
+import streamlit as st
+
+@st.cache_resource
 def load_model():
     model_name = "en_core_web_sm"
-    if importlib.util.find_spec(model_name) is None:
-        subprocess.run(["python", "-m", "spacy", "download", model_name])
-    return spacy.load(model_name)
+    try:
+        return spacy.load(model_name)
+    except OSError:
+        download(model_name)
+        return spacy.load(model_name)
 
 nlp = load_model()
+
 
 
 from sklearn.feature_extraction.text import CountVectorizer
