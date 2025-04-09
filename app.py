@@ -2,33 +2,26 @@ import streamlit as st
 import pdfplumber
 import spacy
 import json
-import spacy
-import subprocess
-import importlib.util
 
+# import streamlit as st
+import spacy
+
+# Load spaCy model with caching to avoid reloading every time
+@st.cache_resource
 def load_model():
-    if not importlib.util.find_spec("en_core_web_sm"):
-        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
     return spacy.load("en_core_web_sm")
 
 nlp = load_model()
 
-# # Load spaCy model with caching to avoid reloading every time
-# @st.cache_resource
-# def load_model():
-#     return spacy.load("en_core_web_sm")
+# st.title("📄 AI Resume Analyzer")
 
-# nlp = load_model()
+# resume_text = st.text_area("Paste your resume here:")
 
-st.title("📄 AI Resume Analyzer")
-
-resume_text = st.text_area("Paste your resume here:")
-
-if resume_text:
-    doc = nlp(resume_text)
-    st.subheader("Named Entities")
-    for ent in doc.ents:
-        st.write(f"• **{ent.text}** → `{ent.label_}`")
+# if resume_text:
+#     doc = nlp(resume_text)
+#     st.subheader("Named Entities")
+#     for ent in doc.ents:
+#         st.write(f"• **{ent.text}** → `{ent.label_}`")
 
 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -103,7 +96,7 @@ def calculate_similarity(resume_skills, jd_skills):
     return round(score, 2)
 
 # Streamlit UI
-st.title("Upload Resume Files")
+st.title("Upload Resume")
 
 resume_file = st.file_uploader("Upload Resume (PDF only)", type=["pdf"])
 jd_file = st.file_uploader("Upload Job Description (TXT only)", type=["txt"])
