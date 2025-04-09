@@ -2,16 +2,23 @@ import streamlit as st
 import pdfplumber
 import spacy
 import json
-
-# import streamlit as st
 import spacy
+import subprocess
+import importlib.util
 
-# Load spaCy model with caching to avoid reloading every time
-@st.cache_resource
 def load_model():
+    if not importlib.util.find_spec("en_core_web_sm"):
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
     return spacy.load("en_core_web_sm")
 
 nlp = load_model()
+
+# # Load spaCy model with caching to avoid reloading every time
+# @st.cache_resource
+# def load_model():
+#     return spacy.load("en_core_web_sm")
+
+# nlp = load_model()
 
 st.title("📄 AI Resume Analyzer")
 
