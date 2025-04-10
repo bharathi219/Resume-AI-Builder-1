@@ -16,7 +16,7 @@ nlp = spacy.load(model_name)
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
 
 SKILLS_DB = ['python', 'java', 'sql', 'machine learning', 'deep learning', 'nlp', 'pandas',
              'numpy', 'django', 'flask', 'html', 'css', 'javascript']
