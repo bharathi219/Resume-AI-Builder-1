@@ -18,3 +18,32 @@ This project is a smart resume analyzer built using NLP techniques that extracts
 ```bash
 git clone https://github.com/yourusername/resume-ai-builder.git
 cd resume-ai-builder
+
+
+
+
+Logic Used
+1. Text Extraction
+PyMuPDF (fitz) is used to extract text from uploaded PDF resumes.
+
+2. Information Extraction
+Uses spaCy’s en_core_web_sm model to identify named entities and key patterns.
+
+Custom rule-based NLP patterns are used to extract:
+
+Skills
+
+Education (degrees, universities)
+
+Work Experience (roles, companies, years)
+
+Projects (using project-related keywords)
+
+3. Job Role Classification
+A text classification model trained using scikit-learn (e.g., Logistic Regression or Naive Bayes).
+
+The model uses TF-IDF features extracted from resume texts to predict job roles like Data Scientist, Web Developer, etc.
+
+4. Similarity Score Calculation
+Compares the extracted resume text and job description using cosine similarity over TF-IDF vectors.
+
