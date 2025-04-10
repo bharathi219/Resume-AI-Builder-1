@@ -1,26 +1,7 @@
 import streamlit as st
 import pdfplumber
-import json
-import subprocess
-import importlib.util
-
-# nlp = load_model()
 import spacy
-from spacy.cli import download
-import os
-
-MODEL_DIR = "local_model"
-
-if not os.path.exists(MODEL_DIR):
-    # Downloads the model to disk, not into site-packages
-    download("en_core_web_sm")
-    import shutil
-    shutil.move(spacy.util.get_package_path("en_core_web_sm"), MODEL_DIR)
-
-# Load the model from local folder
-nlp = spacy.load(MODEL_DIR)
-
-
+import json
 
 
 from sklearn.feature_extraction.text import CountVectorizer
