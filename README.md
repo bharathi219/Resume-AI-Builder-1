@@ -91,13 +91,13 @@ I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a str
 
 🎓 Education:
 
-📍 Pursuing MCA at KMM University
+--**📍 Pursuing MCA at KMM University**
 
-🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024
+--**🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024**
 
 💼 Internship:
 
-Data Analyst Intern at Social Tek AI and Business Solutions, where I contributed to building smarter chatbots using NLP and supported optimization of conversational flows based on user interaction data.
+-- Data Analyst Intern at Social Tek AI and Business Solutions, where I contributed to building smarter chatbots using NLP and supported optimization of conversational flows based on user interaction data.
 
 🛠️ Skills:
 
