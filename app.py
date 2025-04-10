@@ -2,16 +2,16 @@ import streamlit as st
 import pdfplumber
 import json
 import spacy
-import subprocess
+from spacy.cli import download
 import importlib.util
 
-# Check if model is installed, if not, download and link it
 model_name = "en_core_web_sm"
+
+# Check and install the model if not found
 if importlib.util.find_spec(model_name) is None:
-    subprocess.run(["python", "-m", "spacy", "download", model_name])
+    download(model_name)
 
 nlp = spacy.load(model_name)
-
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
