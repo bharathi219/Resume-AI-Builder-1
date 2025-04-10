@@ -91,7 +91,7 @@ I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a str
 
 🎓 Education:
 
---**📍 Pursuing MCA at KMM University**
+. **📍 Pursuing MCA at KMM University**
 
 --**🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024**
 
