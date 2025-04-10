@@ -91,37 +91,37 @@ I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a str
 
 🎓 Education:
 
-. **📍 Pursuing MCA at KMM University**
+◘ **📍 Pursuing MCA at KMM University**
 
---**🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024**
+◘ **🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024**
 
 💼 Internship:
 
--- Data Analyst Intern at Social Tek AI and Business Solutions, where I contributed to building smarter chatbots using NLP and supported optimization of conversational flows based on user interaction data.
+◘ Data Analyst Intern at Social Tek AI and Business Solutions, where I contributed to building smarter chatbots using NLP and supported optimization of conversational flows based on user interaction data.
 
 🛠️ Skills:
 
-Languages: Python, SQL, Java
+◘ Languages: Python, SQL, Java
 
-Data Tools: Power BI, Tableau, Pandas, NumPy
+◘ Data Tools: Power BI, Tableau, Pandas, NumPy
 
-ML/AI: Scikit-learn, TensorFlow, NLP, Computer Vision
+◘ ML/AI: Scikit-learn, TensorFlow, NLP, Computer Vision
 
-Others: Git, Jupyter, Excel (Advanced)
+◘ Others: Git, Jupyter, Excel (Advanced)
 
 📊 Projects:
 
-OCR Application Form Reader using TensorFlow + Tesseract
+» OCR Application Form Reader using TensorFlow + Tesseract
 
-Order Priority Prediction using classification models and Tableau dashboards
+» Order Priority Prediction using classification models and Tableau dashboards
 
-Crop Yield Estimation using regression models and agri data visualization
+» Crop Yield Estimation using regression models and agri data visualization
 
 📜 Certifications:
 
-Data Science with AI
+⦾ Data Science with AI
 
-Data Analysis with Python
+⦾ Data Analysis with Python
 
 🚀 I'm looking for an entry-level role in data analytics or machine learning where I can grow and make a real impact through data-driven solutions.
 
