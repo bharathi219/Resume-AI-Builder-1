@@ -22,7 +22,7 @@ cd resume-ai-builder
 
 
 
-Logic Used
+### Logic Used
 1. Text Extraction
 PyMuPDF (fitz) is used to extract text from uploaded PDF resumes.
 
