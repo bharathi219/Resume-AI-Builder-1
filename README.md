@@ -6,7 +6,7 @@ This project analyzes resumes (PDFs), extracts key information like skills, educ
 
 ## 🚀 Setup Instructions
 
-### 1. Clone the Repository
+### $ 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/resume-ai-builder.git
 cd resume-ai-builder
@@ -86,7 +86,12 @@ if uploaded_file:
 
 ---
 
-## 👤 Author
-**Bharathi**  
-AI & Data Science Intern at SocialHire  
-[LinkedIn](#) | [GitHub](#) | [Email](#)
+## 👤 About Me
+Hi, I'm Bharathi — an enthusiastic Data Science and AI practitioner passionate about solving real-world problems using machine learning, deep learning, and natural language processing.
+
+🔹 Current Role: AI & Data Science Intern at SocialHire
+🔹 Strengths: NLP, classification models, streamlit app development, and data visualization
+🔹 Projects: Resume Analyzer, Crop Yield Estimation, Indian Food Classification, Release Clause Prediction
+🔹 Tech Stack: Python, spaCy, scikit-learn, Streamlit, Pandas, NumPy, Matplotlib
+
+I love building tools that make life easier and help bridge the gap between raw data and actionable insights. I'm always curious to explore new technologies and enjoy collaborating on impactful projects.
