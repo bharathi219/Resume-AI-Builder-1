@@ -87,41 +87,5 @@ if uploaded_file:
 ---
 
 ## 👤 About Me
-I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a strong foundation in machine learning, algorithms, and data analysis. With a background in Computer Science and hands-on experience as a Data Analyst Intern, I thrive on turning raw data into meaningful insights that drive smarter decisions.
-
-**🎓 Education:**
-
-◘ 📍 Pursuing MCA at KMM University
-
-◘ 🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024
-
-**💼 Internship:**
-
-◘ Data Analyst Intern at Social Tek AI and Business Solutions, where I contributed to building smarter chatbots using NLP and supported optimization of conversational flows based on user interaction data.
-
-**🛠️ Skills:**
-
-◘ Languages: Python, SQL, Java
-
-◘ Data Tools: Power BI, Tableau, Pandas, NumPy
-
-◘ ML/AI: Scikit-learn, TensorFlow, NLP, Computer Vision
-
-◘ Others: Git, Jupyter, Excel (Advanced)
-
-**📊 Projects:**
-
-» OCR Application Form Reader using TensorFlow + Tesseract
-
-» Order Priority Prediction using classification models and Tableau dashboards
-
-» Crop Yield Estimation using regression models and agri data visualization
-
-**📜 Certifications:**
-
-⦾ Data Science with AI
-
-⦾ Data Analysis with Python
-
-🚀 I'm looking for an entry-level role in data analytics or machine learning where I can grow and make a real impact through data-driven solutions.
+I'm Bharathi Mekala, currently an MCA student and a Data Analyst Intern at SocialHire. My strengths lie in NLP, Python, and data analysis. This project showcases my ability to build complete end-to-end data science solutions.”
 
