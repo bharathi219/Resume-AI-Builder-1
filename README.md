@@ -22,7 +22,7 @@ cd resume-ai-builder
 
 
 
-### Logic Used
+Logic Used
 1. Text Extraction
 PyMuPDF (fitz) is used to extract text from uploaded PDF resumes.
 
@@ -46,4 +46,18 @@ The model uses TF-IDF features extracted from resume texts to predict job roles 
 
 4. Similarity Score Calculation
 Compares the extracted resume text and job description using cosine similarity over TF-IDF vectors.
+
+Outputs a percentage score indicating the relevance of the resume for the given job description.
+
+
+Time Taken
+Task	Time Spent
+Data Collection & Preprocessing	~6 hours
+NLP Pipelines & Skill Extraction	~5 hours
+Model Training & Classification Logic	~4 hours
+Streamlit UI Development	~3 hours
+Testing & Debugging	~2 hours
+Video Demo Preparation	~2 hours
+Total Time	~22 hours
+
 
