@@ -18,10 +18,17 @@ This project is a smart resume analyzer built using NLP techniques that extracts
 ```bash
 git clone https://github.com/yourusername/resume-ai-builder.git
 cd resume-ai-builder
-## 2.Create and Active a Virtual Environment
+
+### 2.Create and Active a Virtual Environment
 
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate # On Windows: venv\Scripts\activate
+
+## 3. Install Requirements
 
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
+
+## 4. Run the Streamlit App
+
+streamlit run app.py
