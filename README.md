@@ -1,34 +1,92 @@
-## AI Resume Analyzer & Skill Extractor
+# AI Resume Analyzer & Skill Extractor
 
-This project is a smart resume analyzer built using NLP techniques that extracts text from resumes (PDF format), identifies skills, education, work experience, and projects. It also classifies the job role and calculates the similarity between the resume content and a provided job description.
-
-## Features
-
-- PDF resume parsing and text extraction
-- Skill, education, and experience extraction using spaCy
-- Job role classification using a scikit-learn model
-- Resume-to-job-description similarity scoring
-- Streamlit-based interactive web UI
+This project analyzes resumes (PDFs), extracts key information like skills, education, experience, and projects, classifies the job role, and computes how well it matches a job description using NLP and machine learning techniques. Built with spaCy, scikit-learn, and Streamlit.
 
 ---
 
-## Setup Instructions
+## 🚀 Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/resume-ai-builder.git
 cd resume-ai-builder
+```
 
-### 2.Create and Active a Virtual Environment
-
+### 2. Create and Activate a Virtual Environment
+```bash
 python -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
 
-## 3. Install Requirements
-
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
+```
 
-## 4. Run the Streamlit App
-
+### 4. Run the Streamlit App
+```bash
 streamlit run app.py
+```
+
+---
+
+## 🧠 Logic Used
+
+### 1. **Resume Parsing & Text Extraction**
+- PDF files are parsed using **PyMuPDF (fitz)**.
+
+### 2. **Information Extraction**
+- spaCy’s `en_core_web_sm` model helps identify entities and patterns.
+- Rule-based matching for extracting:
+  - **Skills**
+  - **Education** (degree, university)
+  - **Experience** (roles, companies)
+  - **Projects** (based on keywords like 'developed', 'built', etc.)
+
+### 3. **Job Role Classification**
+- A classification model trained on labeled resume text using **TF-IDF** + **scikit-learn classifiers** (e.g., Logistic Regression).
+
+### 4. **Similarity Score Calculation**
+- Cosine similarity between job description and resume content using TF-IDF vectors.
+- Outputs a percentage match score.
+
+---
+
+## ⏱️ Time Taken to Complete
+
+| Task                               | Time Spent |
+|------------------------------------|------------|
+| Resume parsing & extraction logic | ~6 hours   |
+| Skill/education/experience parsing | ~5 hours   |
+| Classification model & scoring     | ~4 hours   |
+| Streamlit UI setup                 | ~3 hours   |
+| Testing, debugging, and polishing  | ~2 hours   |
+| Video demo prep                    | ~2 hours   |
+| **Total**                          | **~22 hours** |
+
+---
+
+## 📁 Upload Directory
+
+Uploaded resumes are saved in the `uploads/` folder:
+
+```python
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+```
+
+When a file is uploaded via the UI:
+```python
+uploaded_file = st.file_uploader("Upload Resume", type=["pdf"])
+if uploaded_file:
+    with open(os.path.join(UPLOAD_FOLDER, uploaded_file.name), "wb") as f:
+        f.write(uploaded_file.getbuffer())
+```
+
+---
+
+## 👤 Author
+**Bharathi**  
+AI & Data Science Intern at SocialHire  
+[LinkedIn](#) | [GitHub](#) | [Email](#)
