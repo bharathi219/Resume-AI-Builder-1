@@ -1,4 +1,4 @@
-# AI Resume Analyzer & Skill Extractor
+## AI Resume Analyzer & Skill Extractor
 
 This project analyzes resumes (PDFs), extracts key information like skills, education, experience, and projects, classifies the job role, and computes how well it matches a job description using NLP and machine learning techniques. Built with spaCy, scikit-learn, and Streamlit.
 
@@ -89,17 +89,17 @@ if uploaded_file:
 ## 👤 About Me
 I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a strong foundation in machine learning, algorithms, and data analysis. With a background in Computer Science and hands-on experience as a Data Analyst Intern, I thrive on turning raw data into meaningful insights that drive smarter decisions.
 
-🎓 Education:
+**🎓 Education:**
 
-◘ **📍 Pursuing MCA at KMM University**
+◘ 📍 Pursuing MCA at KMM University
 
-◘ **🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024**
+◘ 🎓 BSc Computer Science, Sri Vaishnavi Degree College, Class of 2024
 
-💼 Internship:
+**💼 Internship:**
 
 ◘ Data Analyst Intern at Social Tek AI and Business Solutions, where I contributed to building smarter chatbots using NLP and supported optimization of conversational flows based on user interaction data.
 
-🛠️ Skills:
+**🛠️ Skills:**
 
 ◘ Languages: Python, SQL, Java
 
@@ -109,7 +109,7 @@ I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a str
 
 ◘ Others: Git, Jupyter, Excel (Advanced)
 
-📊 Projects:
+**📊 Projects:**
 
 » OCR Application Form Reader using TensorFlow + Tesseract
 
@@ -117,7 +117,7 @@ I'm Bharathi Mekala, a passionate and curious Data Science enthusiast with a str
 
 » Crop Yield Estimation using regression models and agri data visualization
 
-📜 Certifications:
+**📜 Certifications:**
 
 ⦾ Data Science with AI
 
