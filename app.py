@@ -1,20 +1,10 @@
 import streamlit as st
 import pdfplumber
-import json
 import spacy
-from spacy.cli import download
-import importlib.util
-
-model_name = "en_core_web_sm"
-
-# Check and install the model if not found
-if importlib.util.find_spec(model_name) is None:
-    download(model_name)
-
-nlp = spacy.load(model_name)
-
+import json
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import io
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -84,32 +74,35 @@ def calculate_similarity(resume_skills, jd_skills):
     score = cosine_similarity([vectors[0]], [vectors[1]])[0][0]
     return round(score, 2)
 
+def generate_feedback(score):
+    if score >= 0.8:
+        return "🔥 Excellent match! Apply right away."
+    elif score >= 0.6:
+        return "✅ Good match. A few skill enhancements will strengthen your fit."
+    elif score >= 0.4:
+        return "⚠️ Moderate match. You might need to gain or highlight some relevant skills."
+    else:
+        return "❌ Low match. Consider updating your resume or exploring other roles."
+
 # Streamlit UI
-st.title("Upload Resume")
+st.title("AI Resume Analyzer")
 
 resume_file = st.file_uploader("Upload Resume (PDF only)", type=["pdf"])
-jd_file = st.file_uploader("Upload Job Description (TXT only)", type=["txt"])
+jd_files = st.file_uploader("Upload One or More Job Descriptions (TXT only)", type=["txt"], accept_multiple_files=True)
 
-if resume_file and jd_file:
+if resume_file and jd_files:
     resume_text = extract_text_from_pdf(resume_file)
-    jd_text = jd_file.read().decode("utf-8")
-
     skills = extract_skills(resume_text)
-    jd_skills = extract_skills_from_jd(jd_text)
     education = extract_education(resume_text)
     experience = extract_experience(resume_text)
     projects = extract_projects(resume_text)
     role = classify_resume(resume_text)
-    match_score = calculate_similarity(skills, jd_skills)
 
     st.subheader("🎯 Predicted Role:")
     st.write(role)
 
     st.subheader("✅ Skills from Resume:")
     st.write(skills)
-
-    st.subheader("📌 Skills from JD:")
-    st.write(jd_skills)
 
     st.subheader("🎓 Education:")
     st.write(education)
@@ -120,5 +113,20 @@ if resume_file and jd_file:
     st.subheader("🛠 Projects:")
     st.write(projects)
 
-    st.subheader("📊 Match Score:")
-    st.success(f"{match_score * 100:.2f}%")
+    best_score = 0
+    best_jd = ""
+
+    st.subheader("📊 JD Match Scores:")
+    for jd_file in jd_files:
+        jd_text = jd_file.read().decode("utf-8")
+        jd_skills = extract_skills_from_jd(jd_text)
+        match_score = calculate_similarity(skills, jd_skills)
+        feedback = generate_feedback(match_score)
+        st.markdown(f"**{jd_file.name}** - Match Score: `{match_score * 100:.2f}%`")
+        st.info(feedback)
+        if match_score > best_score:
+            best_score = match_score
+            best_jd = jd_file.name
+
+    if best_jd:
+        st.success(f"🏆 Best Match: **{best_jd}** — Apply to this one first!")
