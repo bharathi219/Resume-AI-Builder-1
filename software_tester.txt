@@ -1,0 +1,13 @@
+Job Title: Software Tester
+
+Seeking a Software Tester to ensure product quality through manual and automated testing.
+
+Required Skills:
+- Manual Testing
+- Automation Tools (Selenium preferred)
+- Test Case Writing
+- Bug Tracking Tools (JIRA)
+
+Qualifications:
+- Bachelor’s in Computer Science or IT.
+- At least 1 year of QA experience.

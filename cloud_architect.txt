@@ -1,0 +1,13 @@
+Job Title: Cloud Architect
+
+We are looking for an experienced Cloud Architect to lead the cloud computing strategy of our organization.
+
+Required Skills:
+- Cloud Architecture (AWS/GCP/Azure)
+- Networking and Security
+- Python or Java
+- Infrastructure as Code (Terraform)
+
+Qualifications:
+- Bachelor's or Master’s degree in a relevant field.
+- 3+ years of experience in cloud computing.

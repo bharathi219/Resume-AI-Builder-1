@@ -1,0 +1,16 @@
+Job Title: AI/ML Research Intern
+
+We are seeking an enthusiastic AI/ML Research Intern to assist in developing and testing machine learning models.
+
+Required Skills:
+- Machine Learning
+- Python
+- Numpy
+- Pandas
+- Deep Learning
+- TensorFlow or PyTorch
+- Good communication skills
+
+Qualifications:
+- Currently pursuing B.Tech/M.Tech or M.Sc. in Computer Science, AI, or Data Science.
+- Academic or project experience with ML/AI.

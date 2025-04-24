@@ -1,0 +1,14 @@
+Job Title: DevOps Engineer
+
+Looking for a DevOps Engineer to manage CI/CD pipelines and infrastructure deployment.
+
+Required Skills:
+- AWS / Azure
+- Docker
+- Kubernetes
+- Jenkins
+- Python or Bash scripting
+
+Qualifications:
+- Bachelor's in Computer Science or related field.
+- Minimum 2 years of experience with DevOps tools and practices.

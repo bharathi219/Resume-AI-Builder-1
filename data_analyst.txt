@@ -1,0 +1,14 @@
+Job Title: Data Analyst
+
+The Data Analyst will gather, process, and analyze large datasets to help the company make data-driven decisions.
+
+Required Skills:
+- SQL
+- Excel
+- Power BI or Tableau
+- Python (Pandas, Numpy)
+- Data Cleaning
+
+Qualifications:
+- B.Sc. or M.Sc. in Statistics, Computer Science, or related field.
+- At least 1 year of experience in analytics or business intelligence.

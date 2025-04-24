@@ -1,0 +1,16 @@
+Job Title: Data Scientist
+
+We are looking for a Data Scientist to analyze large amounts of raw information to find patterns and use machine learning models to build predictive systems.
+
+Required Skills:
+- Python
+- SQL
+- Machine Learning
+- Deep Learning
+- NLP
+- Pandas
+- Numpy
+
+Qualifications:
+- Bachelor's or Master’s degree in Computer Science, Statistics, or a related field.
+- 1+ years of experience in data science or analytics.

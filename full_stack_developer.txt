@@ -1,0 +1,16 @@
+Job Title: Full Stack Developer
+
+We are looking for a skilled Full Stack Developer to work on web applications from frontend to backend.
+
+Required Skills:
+- JavaScript
+- HTML
+- CSS
+- Python
+- Flask or Django
+- SQL or MongoDB
+
+Qualifications:
+- Bachelor’s degree in Computer Science or related field.
+- Experience building and deploying full-stack applications.
+- Good understanding of APIs and REST architecture.

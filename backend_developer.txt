@@ -1,0 +1,14 @@
+Job Title: Backend Developer
+
+We are hiring a Backend Developer responsible for managing the interchange of data between the server and the users.
+
+Required Skills:
+- Python
+- Django
+- REST APIs
+- SQL
+- Docker (Optional)
+
+Qualifications:
+- BTech or equivalent degree in Computer Science.
+- Experience building backend systems and APIs.
