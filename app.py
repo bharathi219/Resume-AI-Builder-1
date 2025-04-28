@@ -83,22 +83,22 @@ def generate_feedback(score, resume_skills, jd_skills):
         top_missing = None
 
     if score >= 0.8:
-        return f"🔥 Excellent match! Apply right away."
+        return f"Feedback:🔥 Excellent match! Apply right away."
     elif score >= 0.6:
-        return f"✅ Good match. A few skill enhancements will strengthen your fit."
+        return f"Feedback:✅ Good match. A few skill enhancements will strengthen your fit."
     elif score >= 0.4:
         if top_missing:
-            return f"⚠️ Moderate match. Consider learning or emphasizing: {top_missing}. These are key in this JD and missing from your resume."
+            return f"Feedback:⚠️ Moderate match. Consider learning or emphasizing: {top_missing}. These are key in this JD and missing from your resume."
         else:
-            return f"⚠️ Moderate match. Some skill mismatch detected. Consider aligning your resume better to the job."
+            return f"Feedback:⚠️ Moderate match. Some skill mismatch detected. Consider aligning your resume better to the job."
     else:
         if top_missing:
             if len(missing_skills) == 1:
-                return f"❌ Low match. You're missing the key skill: {top_missing}. Consider gaining experience with it to improve your fit."
+                return f"Feedback:❌ Low match. You're missing the key skill: {top_missing}. Consider gaining experience with it to improve your fit."
             else:
-                return f"❌ Low match. You're missing key skills: {top_missing}. Consider gaining experience with them to improve your profile."
+                return f"Feedback:❌ Low match. You're missing key skills: {top_missing}. Consider gaining experience with them to improve your profile."
         else:
-            return f"❌ Low match. Skills mismatch detected. Consider aligning your resume better to the job requirements."
+            return f"Feedback:❌ Low match. Skills mismatch detected. Consider aligning your resume better to the job requirements."
         
 
 # Streamlit UI
@@ -132,7 +132,22 @@ if resume_file and jd_files:
 
     best_score = 0
     best_jd = ""
+    best_feedback = ""
+    jd_scores = []
 
+    for jd_file in jd_files:
+        jd_text = jd_file.read().decode("utf-8")
+        jd_skills = extract_skills_from_jd(jd_text)
+        match_score = calculate_similarity(skills, jd_skills)
+        feedback = generate_feedback(match_score, skills, jd_skills)
+        jd_scores.append((jd_file.name, match_score, feedback))
+        if match_score > best_score:
+            best_score = match_score
+            best_jd = jd_file.name
+            best_feedback = feedback
+
+
+    
     st.subheader("📊 JD Match Scores:")
     for jd_file in jd_files:
         jd_text = jd_file.read().decode("utf-8")
@@ -145,5 +160,10 @@ if resume_file and jd_files:
             best_score = match_score
             best_jd = jd_file.name
 
+     # 🏆 Show the best match FIRST
     if best_jd:
         st.success(f"🏆 Best Match: **{best_jd}** — Apply to this one first!")
+        st.info(f"Feedback: {best_feedback}")
+
+    
+
