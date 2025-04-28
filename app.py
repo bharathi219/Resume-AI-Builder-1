@@ -76,15 +76,30 @@ def calculate_similarity(resume_skills, jd_skills):
 
 def generate_feedback(score, resume_skills, jd_skills):
     missing_skills = list(set(jd_skills) - set(resume_skills))
-    top_missing = ", ".join(missing_skills[:3])
+    
+    if missing_skills:
+        top_missing = ", ".join(skill.upper() for skill in missing_skills[:3])
+    else:
+        top_missing = None
+
     if score >= 0.8:
         return f"🔥 Excellent match! Apply right away."
     elif score >= 0.6:
         return f"✅ Good match. A few skill enhancements will strengthen your fit."
     elif score >= 0.4:
-        return f"⚠️ Moderate match. Consider learning or emphasizing: {top_missing}. These are key in this JD and missing from your resume."
+        if top_missing:
+            return f"⚠️ Moderate match. Consider learning or emphasizing: {top_missing}. These are key in this JD and missing from your resume."
+        else:
+            return f"⚠️ Moderate match. Some skill mismatch detected. Consider aligning your resume better to the job."
     else:
-        return f"❌ Low match. You're missing key skills: {top_missing}. Consider updating your resume or exploring other roles."
+        if top_missing:
+            if len(missing_skills) == 1:
+                return f"❌ Low match. You're missing the key skill: {top_missing}. Consider gaining experience with it to improve your fit."
+            else:
+                return f"❌ Low match. You're missing key skills: {top_missing}. Consider gaining experience with them to improve your profile."
+        else:
+            return f"❌ Low match. Skills mismatch detected. Consider aligning your resume better to the job requirements."
+        
 
 # Streamlit UI
 st.title("AI Resume Analyzer")
