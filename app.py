@@ -8,8 +8,8 @@ import io
 
 nlp = spacy.load("en_core_web_sm")
 
-SKILLS_DB = ['python', 'java', 'sql', 'machine learning', 'deep learning', 'nlp', 'pandas',
-             'numpy', 'django', 'flask', 'html', 'css', 'javascript', 'power bi', 'aws', 'time series forecasting']
+SKILLS_DB = ['python', 'java', 'sql', 'machine learning', 'deep learning', 'nlp', 'pandas','numpy', 'django', 'flask', 'html', 'css',
+              'javascript', 'power bi', 'aws', 'time series forecasting',  'rest api', 'docker', 'fastapi', 'git', 'linux', 'bash', 'ci/cd','postgresql', 'mysql']
 
 def extract_text_from_pdf(pdf_file):
     text = ""
